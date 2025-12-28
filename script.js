@@ -79,8 +79,6 @@ function addAnimation() {
 /* =========================================
    6. PROJECT MODAL DATA & LOGIC
    ========================================= */
-
-// Project Data Object (Case Studies)
 const projectsData = {
     portfolio: {
         title: "Personal Portfolio Website",
@@ -105,22 +103,6 @@ const projectsData = {
         optimize: "Optimized SQL queries by using Indexing on student IDs. Used Java's efficient collection frameworks to handle in-memory data processing before saving to the DB.",
         experience: "This was my first deep dive into Backend logic and Database connectivity (JDBC). I learned how to structure a full-stack application and handle errors gracefully.",
         tech: ["Java", "MySQL", "JDBC", "OOP Principles"]
-    },
-    weather: {
-        title: "Real-Time Weather App",
-        desc: "A sleek weather dashboard that fetches real-time data from OpenWeatherMap API based on user location or city search.",
-        unique: "It features dynamic background changing based on the weather condition (e.g., rainy background for rain). It also caches data locally for 1 hour to prevent unnecessary API calls.",
-        optimize: "Used JavaScript's 'Debouncing' technique on the search bar to prevent API calls on every keystroke, saving quota and bandwidth.",
-        experience: "Mastered the use of Asynchronous JavaScript (Promises & Async/Await). I also learned how to handle API errors (like 404 City Not Found) to improve user experience.",
-        tech: ["JavaScript", "Fetch API", "DOM Manipulation"]
-    },
-    task: {
-        title: "Task Master (To-Do App)",
-        desc: "A productivity app that lets users add, edit, and delete tasks. It saves data to the browser's LocalStorage so tasks persist after refresh.",
-        unique: "Includes a drag-and-drop feature to reorder tasks and a 'Dark Mode' toggle that remembers user preference.",
-        optimize: "Minimal DOM manipulation by re-rendering only changed list items. Efficient use of LocalStorage to store JSON data.",
-        experience: "Learned the browser's Web Storage API and how to serialize/deserialize JSON data. It was a great exercise in CRUD logic on the client side.",
-        tech: ["JavaScript", "LocalStorage", "HTML/CSS"]
     }
 };
 
