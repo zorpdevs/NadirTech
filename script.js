@@ -22,39 +22,63 @@ function type() {
 document.addEventListener('DOMContentLoaded', type);
 
 /* =========================================
-   2. Mobile Menu Toggle
+   2. Mobile Menu Toggle & Auto Close
    ========================================= */
 const menuBtn = document.querySelector('.menu-btn');
 const navLinks = document.querySelector('.nav-links');
+
 menuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    if (navLinks.classList.contains('active')) { menuBtn.innerHTML = '<i class="fas fa-times"></i>'; } else { menuBtn.innerHTML = '<i class="fas fa-bars"></i>'; }
+    
+    if(navLinks.classList.contains('active')){
+        menuBtn.innerHTML = '<i class="fas fa-times"></i>';
+    } else {
+        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    }
 });
+
+// AUTO CLOSE: Close menu when a link is clicked
 document.querySelectorAll('.nav-links li a').forEach(link => {
     link.addEventListener('click', () => {
-        navLinks.classList.remove('active'); menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        navLinks.classList.remove('active');
+        menuBtn.innerHTML = '<i class="fas fa-bars"></i>';
     });
 });
 
 /* =========================================
    3. Scroll Progress & Back to Top
    ========================================= */
-window.onscroll = function () {
+window.onscroll = function() {
     let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
     let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
     let scrolled = (winScroll / height) * 100;
     document.querySelector(".scroll-progress").style.width = scrolled + "%";
+    
     const backToTop = document.getElementById("backToTop");
-    if (winScroll > 300) { backToTop.style.display = "flex"; } else { backToTop.style.display = "none"; }
+    if (winScroll > 300) {
+        backToTop.style.display = "flex";
+    } else {
+        backToTop.style.display = "none";
+    }
 };
-document.getElementById('backToTop').addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+
+document.getElementById('backToTop').addEventListener('click', function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 /* =========================================
    4. Advanced Scroll Reveal Animations
    ========================================= */
 const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('show'); } });
-}, { threshold: 0.1 });
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 
@@ -62,18 +86,22 @@ hiddenElements.forEach((el) => observer.observe(el));
    5. Infinite Tech Scroller Logic
    ========================================= */
 const scrollers = document.querySelectorAll(".tech-scroller");
-if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) { addAnimation(); }
+
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+
 function addAnimation() {
-    scrollers.forEach((scroller) => {
-        scroller.setAttribute("data-animated", true);
-        const scrollerInner = scroller.querySelector(".scroller-inner");
-        const scrollerContent = Array.from(scrollerInner.children);
-        scrollerContent.forEach((item) => {
-            const duplicatedItem = item.cloneNode(true);
-            duplicatedItem.setAttribute("aria-hidden", true);
-            scrollerInner.appendChild(duplicatedItem);
-        });
+  scrollers.forEach((scroller) => {
+    scroller.setAttribute("data-animated", true);
+    const scrollerInner = scroller.querySelector(".scroller-inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
     });
+  });
 }
 
 /* =========================================
@@ -128,7 +156,7 @@ document.querySelectorAll(".btn-case-study").forEach(btn => {
             modalUnique.innerText = project.unique;
             modalOptimize.innerText = project.optimize;
             modalExperience.innerText = project.experience;
-
+            
             // Clear previous tech stack and add new
             modalTech.innerHTML = "";
             project.tech.forEach(t => {
