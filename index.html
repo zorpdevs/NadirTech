@@ -5,16 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nadir Akhtar | Software Engineer Portfolio</title>
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
+
+    <!-- Font Awesome (Icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- Scroll Progress Bar -->
     <div class="scroll-progress"></div>
 
+    <!-- Navigation Bar -->
     <nav class="navbar">
         <div class="logo">Nadir<span>.Dev</span></div>
         <ul class="nav-links">
@@ -24,47 +32,68 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-        <div class="menu-btn"><i class="fas fa-bars"></i></div>
+        <div class="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
     </nav>
 
     <!-- HERO SECTION -->
     <section id="home" class="hero">
         <div class="hero-container">
+
+            <!-- Left Side: Text -->
             <div class="hero-text hidden">
                 <h3>Hello, I am</h3>
                 <h1 class="glow-text">Nadir Akhtar</h1>
                 <h2 class="typing-text">I am a <span class="type-effect"></span></h2>
                 <p>Software Engineer & CSE Diploma Graduate. I build high-performance, scalable, and aesthetically
                     pleasing web applications using modern technologies.</p>
+
                 <div class="hero-buttons">
                     <a href="#projects" class="btn primary-btn"><span>View Projects</span></a>
                     <a href="#contact" class="btn secondary-btn">Contact Me</a>
                 </div>
+
                 <div class="social-icons-hero">
                     <a href="https://github.com/zorpdevs" target="_blank"><i class="fab fa-github"></i></a>
                     <a href="https://discord.gg/man4H3Tt4B" target="_blank"><i class="fab fa-discord"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>
                 </div>
             </div>
+
+            <!-- Right Side: 3D Image + Decorations -->
             <div class="hero-visual hidden">
                 <div class="image-wrapper">
                     <div class="circle-bg"></div>
                     <div class="bottom-glow"></div>
+
+                    <!-- YOUR IMAGE (Ensure 'hero.png' is in folder) -->
                     <img src="hero.png" alt="Nadir Akhtar" class="hero-img">
+
                     <div class="deco-badge badge-left">
                         <div class="badge-icon"><i class="fas fa-check"></i></div>
-                        <div class="badge-text"><span>Verified</span><small>Developer</small></div>
+                        <div class="badge-text">
+                            <span>Verified</span>
+                            <small>Developer</small>
+                        </div>
                     </div>
+
                     <div class="deco-badge badge-right">
                         <div class="badge-icon code-icon"><i class="fas fa-code"></i></div>
-                        <div class="badge-text"><span>Clean</span><small>Code</small></div>
+                        <div class="badge-text">
+                            <span>Clean</span>
+                            <small>Code</small>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Floating Tech Icons -->
                 <div class="floating-icon icon-1"><i class="fab fa-react"></i></div>
                 <div class="floating-icon icon-2"><i class="fab fa-js"></i></div>
                 <div class="floating-icon icon-3"><i class="fab fa-python"></i></div>
                 <div class="floating-icon icon-4"><i class="fas fa-database"></i></div>
             </div>
+
         </div>
     </section>
 
@@ -76,7 +105,9 @@
                 <div class="about-text">
                     <p>I am a passionate <strong>Software Engineer</strong> with a Diploma in <strong>Computer Science &
                             Engineering (CSE)</strong>. My expertise lies in full-stack development, solving complex
-                        algorithms, and optimizing performance.</p>
+                        algorithms, and optimizing performance. I treat every line of code as an opportunity to create
+                        something impactful.</p>
+
                     <div class="stats">
                         <div class="stat-item">
                             <h3>Diploma</h3>
@@ -96,10 +127,12 @@
         </div>
     </section>
 
-    <!-- TECH ARSENAL -->
+    <!-- TECH ARSENAL (Infinite Scroll) -->
     <section id="skills" class="section alt-bg">
         <div class="container hidden">
             <h2 class="section-title">Tech Arsenal</h2>
+
+            <!-- Row 1: Left Scrolling -->
             <div class="tech-scroller" data-direction="left" data-speed="slow">
                 <div class="scroller-inner">
                     <div class="tech-item"><i class="fab fa-html5" style="color: #E34F26;"></i> HTML5</div>
@@ -107,8 +140,11 @@
                     <div class="tech-item"><i class="fab fa-js" style="color: #F7DF1E;"></i> JavaScript</div>
                     <div class="tech-item"><i class="fab fa-react" style="color: #61DAFB;"></i> React.js</div>
                     <div class="tech-item"><i class="fab fa-bootstrap" style="color: #7952B3;"></i> Bootstrap</div>
+                    <div class="tech-item"><i class="fab fa-sass" style="color: #CC6699;"></i> Sass</div>
                 </div>
             </div>
+
+            <!-- Row 2: Right Scrolling -->
             <div class="tech-scroller" data-direction="right" data-speed="slow">
                 <div class="scroller-inner">
                     <div class="tech-item"><i class="fab fa-python" style="color: #3776AB;"></i> Python</div>
@@ -116,8 +152,11 @@
                     <div class="tech-item"><i class="fas fa-database" style="color: #4479A1;"></i> MySQL</div>
                     <div class="tech-item"><i class="fab fa-git-alt" style="color: #F05032;"></i> Git</div>
                     <div class="tech-item"><i class="fab fa-github" style="color: #ffffff;"></i> GitHub</div>
+                    <div class="tech-item"><i class="fab fa-node" style="color: #339933;"></i> Node.js</div>
+                    <div class="tech-item"><i class="fas fa-terminal" style="color: #ccc;"></i> Bash</div>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -157,22 +196,25 @@
         </div>
     </section>
 
-    <!-- PROJECTS SECTION (UPDATED IMAGES) -->
+    <!-- PROJECTS SECTION (Modern Alternating Layout) -->
     <section id="projects" class="section alt-bg">
         <div class="container hidden">
             <h2 class="section-title">Featured Projects</h2>
 
             <div class="projects-container">
+
                 <!-- Project 1 (Image Left) -->
                 <div class="project-entry">
                     <div class="project-image">
-                        <!-- Code / Dark Setup Image -->
+                        <!-- Dark Code Setup Image -->
                         <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?q=80&w=1000&auto=format&fit=crop"
                             alt="Personal Portfolio Project">
                     </div>
                     <div class="project-description">
                         <h3>Personal Portfolio</h3>
-                        <div class="tech-stack"><span>HTML</span><span>CSS</span><span>JS</span></div>
+                        <div class="tech-stack">
+                            <span>HTML</span><span>CSS</span><span>JS</span>
+                        </div>
                         <p>A high-performance portfolio with dark mode & smooth animations. Built from scratch to
                             showcase my abilities in front-end development and UI/UX design.</p>
                         <div class="card-buttons">
@@ -185,13 +227,15 @@
                 <!-- Project 2 (Image Right) -->
                 <div class="project-entry project-entry-reverse">
                     <div class="project-image">
-                        <!-- Shopping / E-commerce Image -->
+                        <!-- E-Commerce Image -->
                         <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=1000&auto=format&fit=crop"
                             alt="E-Commerce UI Project">
                     </div>
                     <div class="project-description">
                         <h3>E-Commerce UI</h3>
-                        <div class="tech-stack"><span>React</span><span>Redux</span></div>
+                        <div class="tech-stack">
+                            <span>React</span><span>Redux</span>
+                        </div>
                         <p>Modern shop interface with a stateful shopping cart, dynamic product filtering, and a clean,
                             responsive layout for all devices.</p>
                         <div class="card-buttons">
@@ -204,13 +248,15 @@
                 <!-- Project 3 (Image Left) -->
                 <div class="project-entry">
                     <div class="project-image">
-                        <!-- Data / Dashboard Image -->
+                        <!-- Dashboard Image -->
                         <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop"
                             alt="Student Management System Project">
                     </div>
                     <div class="project-description">
                         <h3>Student Management System</h3>
-                        <div class="tech-stack"><span>Java</span><span>MySQL</span></div>
+                        <div class="tech-stack">
+                            <span>Java</span><span>MySQL</span>
+                        </div>
                         <p>A robust desktop application for educational institutes to manage student records efficiently
                             with full CRUD functionality and a secure database.</p>
                         <div class="card-buttons">
@@ -219,8 +265,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </section>
 
@@ -253,6 +299,7 @@
         <p>Copyright © 2025 <strong>Nadir Akhtar</strong>. Built with 💜 & Code.</p>
     </footer>
 
+    <!-- Back to Top -->
     <button id="backToTop"><i class="fas fa-arrow-up"></i></button>
 
     <!-- GLASSMORPHISM MODAL -->
@@ -267,19 +314,19 @@
             <div class="modal-body">
                 <div class="modal-section">
                     <h4><i class="fas fa-info-circle"></i> Description</h4>
-                    <p id="modalDesc"></p>
+                    <p id="modalDesc">Project description goes here...</p>
                 </div>
                 <div class="modal-section">
                     <h4><i class="fas fa-star"></i> What's Different?</h4>
-                    <p id="modalUnique"></p>
+                    <p id="modalUnique">Unique features...</p>
                 </div>
                 <div class="modal-section">
                     <h4><i class="fas fa-tachometer-alt"></i> How I Optimized It</h4>
-                    <p id="modalOptimize"></p>
+                    <p id="modalOptimize">Optimization details...</p>
                 </div>
                 <div class="modal-section">
                     <h4><i class="fas fa-lightbulb"></i> Real-World Impact & Experience</h4>
-                    <p id="modalExperience"></p>
+                    <p id="modalExperience">Impact details...</p>
                 </div>
                 <div class="modal-footer">
                     <div id="modalTech" class="tech-stack-modal"></div>
@@ -288,6 +335,7 @@
         </div>
     </div>
 
+    <!-- JavaScript File -->
     <script src="script.js"></script>
 </body>
 
